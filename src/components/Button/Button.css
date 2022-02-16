@@ -1,0 +1,45 @@
+.btn-primary {
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  background: lightblue;
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  background: #f086f0bb;
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background: violet;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-error {
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  background: #df0a0ab4;
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-error:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}

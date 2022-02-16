@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import Verify from "./Pages/Verify";
 
 function App() {
+  const [user, setUser] = useState({});
+  const id = JSON.parse(localStorage.getItem("id"));
+
+  useEffect(() => {
+    fetch(`https://reqres.in/api/users/${id}`)
+      .then((res) => res.json())
+      .then((data) => setUser(data));
+  }, [id]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Verify user={user} />
     </div>
   );
 }
